@@ -176,6 +176,18 @@
         "id": 1
       },
       "id": 4
+    },
+    {
+      "userId": 1,
+      "movie": {
+        "title": "Interstellar",
+        "year": 2014,
+        "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "image": "https://i.ebayimg.com/images/g/ls0AAOSwKzViNuve/s-l400.jpg",
+        "director": "Christopher Nolan",
+        "id": 8
+      },
+      "id": 5
     }
   ]
 }

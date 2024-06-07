@@ -33,30 +33,22 @@ favouriteMovies: iFavorites[] = []
   }
 
 
-  toggleFavourite(movie:iMovies){
+  toggleFavourite(movie:iMovies){    //non sono riuscito a farla funzionare del tutto si crea un errore alla nuova sessione in breve avvolte duplica i preferiti e non li rimuove
 const accData= this.authsvc.getAccessData()
 if(!accData) return;
 this.userid = accData.user.id;
-
-
 const favouriteM:Partial<iFavorites>  ={
   userId:this.userid,
 movie:movie
 }
-
-
 const sFavourite: iFavorites| undefined = this.favouriteMovies.find(f =>f.movie.id === movie.id)
 if(sFavourite === undefined) {
-
-
 this.favouritesvc.create(favouriteM).subscribe(f=>{this.favouritemovieSId = f
   this.favouriteMovies.push(this.favouritemovieSId)
-
 })
 }
 else {
-
-  let serchD: number = this.favouriteMovies.findIndex(f => f.id ===this.favouritemovieSId.id);
+ let serchD: number = this.favouriteMovies.findIndex(f => f.id ===this.favouritemovieSId.id);
 if(serchD!== -1) {this.favouriteMovies.splice(serchD, 1)}
   this.favouritesvc.delete(this.favouritemovieSId.id).subscribe({})}
 
