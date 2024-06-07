@@ -20,6 +20,13 @@
       "nome": "Bobo",
       "cognome": "Cutrugno",
       "id": 3
+    },
+    {
+      "email": "l@libero",
+      "password": "$2a$10$poUctR38tPiTQAHWRHuH7OMkIYhB/Ka94QwotWwhXFDbrvyzxd9J2",
+      "nome": "Todo",
+      "cognome": "Yzzuki",
+      "id": 4
     }
   ],
   "movies": [
@@ -188,6 +195,30 @@
         "id": 8
       },
       "id": 5
+    },
+    {
+      "userId": 4,
+      "movie": {
+        "title": "Inception",
+        "year": 2010,
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "image": "https://m.media-amazon.com/images/M/MV5BMTI3NDE0MzgxNl5BMl5BanBnXkFtZTcwMzM2NDUyMg@@._V1_FMjpg_UX1000_.jpg",
+        "director": "Christopher Nolan",
+        "id": 1
+      },
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "movie": {
+        "title": "The Godfather",
+        "year": 1972,
+        "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "image": "https://th.bing.com/th/id/OIP.KnN2oT6ixoed_88ecP56EwHaKj?w=202&h=288&c=7&r=0&o=5&pid=1.7",
+        "director": "Francis Ford Coppola",
+        "id": 3
+      },
+      "id": 7
     }
   ]
 }

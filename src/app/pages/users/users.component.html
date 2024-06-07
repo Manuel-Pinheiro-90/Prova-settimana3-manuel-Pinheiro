@@ -1,6 +1,6 @@
-<h1>UTenti registrati</h1>
-<div class="row">
-  <div class="col" *ngFor="let v of users">
+<h1 class="m-3 text-center">Uenti registrati</h1>
+<div class="row m-lg-5">
+  <div class="col d-flex justify-content-center m-4" *ngFor="let v of users">
     <div class="card" style="width: 18rem">
       <img
         src="https://png.pngtree.com/png-vector/20191009/ourlarge/pngtree-user-icon-png-image_1796659.jpg"
@@ -11,7 +11,6 @@
         <p class="card-text">
           {{ v.email }}
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
