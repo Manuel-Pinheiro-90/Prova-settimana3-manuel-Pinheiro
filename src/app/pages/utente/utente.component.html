@@ -19,3 +19,20 @@
   </div>
   <div class="col"></div>
 </div>
+
+<div class="row">
+  <div class="col" *ngFor="let f of favourite">
+    <div class="card stil h-100">
+      <img [src]="[f.movie.image]" class="card-img-top img-stil" />
+      <div class="card-body">
+        <h5 class="card-title">{{ f.movie.title }}</h5>
+
+        <p class="card-text">
+          {{ f.movie.plot }}
+        </p>
+        <p>{{ f.movie.year }}</p>
+        <p>{{ f.movie.director }}</p>
+      </div>
+    </div>
+  </div>
+</div>

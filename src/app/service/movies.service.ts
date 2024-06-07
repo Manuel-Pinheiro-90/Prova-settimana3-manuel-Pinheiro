@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { iMovies } from '../models/i-movies';
-import { BehaviorSubject } from 'rxjs';
+
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../pages/auth/auth.service';
+import { FavouriteService } from './favourite.service';
+import { iFavorites } from '../models/i-preferiti';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +14,14 @@ export class MoviesService {
 
   moviesUrl = environment.moviesUrl;
   movies: iMovies[]=[]
+  userid!: number;
+favouritemovieSId!: iFavorites
+favouriteMovies: iFavorites[] = []
 
-  movieSubj = new BehaviorSubject<iMovies[]>([]);
-  $movie = this.movieSubj.asObservable()
 
-  constructor(private http:HttpClient) {
-    this.getAllMovies().subscribe(data=>{
-      this.movieSubj.next(data)
-      this.movies=data
-    })
+
+  constructor(private http:HttpClient, private  authsvc: AuthService, private favouritesvc: FavouriteService) {
+
   }
 
   getAllMovies(){
@@ -30,10 +32,45 @@ export class MoviesService {
     return this.http.get<iMovies>(`${this.moviesUrl}/${id}`)
   }
 
-  delete(id:number){
-    return this.http.delete(`${this.moviesUrl}/${id}`)
+
+  toggleFavourite(movie:iMovies){
+const accData= this.authsvc.getAccessData()
+if(!accData) return;
+this.userid = accData.user.id;
+
+
+const favouriteM:Partial<iFavorites>  ={
+  userId:this.userid,
+movie:movie
+}
+
+
+const sFavourite: iFavorites| undefined = this.favouriteMovies.find(f =>f.movie.id === movie.id)
+if(sFavourite === undefined) {
+
+
+this.favouritesvc.create(favouriteM).subscribe(f=>{this.favouritemovieSId = f
+  this.favouriteMovies.push(this.favouritemovieSId)
+
+})
+}
+else {
+
+  let serchD: number = this.favouriteMovies.findIndex(f => f.id ===this.favouritemovieSId.id);
+if(serchD!== -1) {this.favouriteMovies.splice(serchD, 1)}
+  this.favouritesvc.delete(this.favouritemovieSId.id).subscribe({})}
+
+}
+
+
+
+
   }
 
 
 
-}
+
+
+
+
+

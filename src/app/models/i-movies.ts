@@ -4,7 +4,7 @@ export interface iMovies {
   plot: string
   image: string
   director:string
-
+ id:number
 
 
 

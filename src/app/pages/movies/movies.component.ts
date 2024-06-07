@@ -1,8 +1,9 @@
+import { iMovies } from './../../models/i-movies';
 import { Component } from '@angular/core';
-import { iMovies } from '../../models/i-movies';
+
 import { iUser } from '../../models/i-user';
 import { MoviesService } from '../../service/movies.service';
-import { AuthService } from '../auth/auth.service';
+
 
 @Component({
   selector: 'app-movies',
@@ -24,6 +25,19 @@ export class MoviesComponent {
       console.log(this.movies)
 
       });
+
+
+
+
+
+
+}
+
+toggleFavourite(movie:iMovies){
+  this.movieSvc.toggleFavourite(movie);
+
+
+
 
 
 }

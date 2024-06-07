@@ -10,7 +10,9 @@
         </p>
         <p>{{ f.year }}</p>
         <p>{{ f.director }}</p>
-        <a href="#" class="btn btn-primary">preferiti</a>
+        <button class="btn btn-info" (click)="toggleFavourite(f)">
+          Preferito
+        </button>
       </div>
     </div>
   </div>
