@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './main-component/nav/nav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './main-component/footer/footer.component';
+import { AuthInterceptor } from './pages/auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FooterComponent } from './main-component/footer/footer.component';
  HttpClientModule
 
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS,useClass: AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
