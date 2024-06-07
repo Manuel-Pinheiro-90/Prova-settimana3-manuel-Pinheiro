@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { iUser } from '../../../models/i-user';
 import { Router } from '@angular/router';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -19,6 +20,9 @@ export class RegisterComponent {
   ){}
 
   register(){this.authSvc.register(this.newUser).subscribe(()=>{this.router.navigate(['/login'])})}
+
+
+
 
 
 

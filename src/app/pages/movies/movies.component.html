@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col" *ngFor="let f of movies">
-    <div class="card" style="width: 18rem">
-      <img [src]="[f.image]" class="card-img-top" alt="..." />
+    <div class="card stil h-100">
+      <img [src]="[f.image]" class="card-img-top img-stil" />
       <div class="card-body">
         <h5 class="card-title">{{ f.title }}</h5>
 
@@ -10,7 +10,7 @@
         </p>
         <p>{{ f.year }}</p>
         <p>{{ f.director }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">preferiti</a>
       </div>
     </div>
   </div>

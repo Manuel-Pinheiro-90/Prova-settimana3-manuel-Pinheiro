@@ -1,9 +1,9 @@
 import { iMovies } from "./i-movies"
 
-export interface iPreferiti {
+export interface iFavorites {
 userId:number
 movie:iMovies
-
+id:number
 
 
 
