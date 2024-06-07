@@ -9,12 +9,7 @@ const routes: Routes = [
   canActivateChild: [GuestGuard],
    },
 
-
-
-
-
-
-  { path: 'utente', loadChildren: () => import('./pages/utente/utente.module').then(m => m.UtenteModule),
+   { path: 'utente', loadChildren: () => import('./pages/utente/utente.module').then(m => m.UtenteModule),
     canActivate:[AuthGuard],
   canActivateChild: [AuthGuard]
    },
@@ -25,9 +20,7 @@ const routes: Routes = [
   canActivateChild: [AuthGuard]
    },
 
-
-
-  { path: 'movies', loadChildren: () => import('./pages/movies/movies.module').then(m => m.MoviesModule),
+{ path: 'movies', loadChildren: () => import('./pages/movies/movies.module').then(m => m.MoviesModule),
      canActivate:[AuthGuard],
     canActivateChild: [AuthGuard] }
 
