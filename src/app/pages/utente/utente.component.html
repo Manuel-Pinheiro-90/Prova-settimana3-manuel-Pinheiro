@@ -1,17 +1,19 @@
 <div class="row row-cols-3">
   <div class="col"></div>
-  <div class="col">
-    <div class="card">
-      <img
-        src="https://png.pngtree.com/png-vector/20191009/ourlarge/pngtree-user-icon-png-image_1796659.jpg"
-        class="card-img-top img-stil stil"
-        alt="..."
-      />
+  <div class="col-12">
+    <div class="card mt-5 text-center">
+      <div>
+        <img
+          src="https://png.pngtree.com/png-vector/20191009/ourlarge/pngtree-user-icon-png-image_1796659.jpg"
+          class="card-img-top img-stil stil img-fluid"
+          alt="..."
+        />
+      </div>
       <div class="card-body">
         <h5 class="card-title">{{ user.nome }} {{ user.cognome }}</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Questa è la tua area personale! di seguito puoi vedere tutti i film
+          che hai selezionato !
         </p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
@@ -20,6 +22,7 @@
   <div class="col"></div>
 </div>
 
+<H3>Film Preferiti</H3>
 <div class="row">
   <div class="col col-3" *ngFor="let f of favourite">
     <div class="card stil h-100">

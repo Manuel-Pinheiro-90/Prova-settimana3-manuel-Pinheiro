@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col" *ngFor="let f of movies">
+  <div class="col-12 col-md-6 col-lg-3 mt-5" *ngFor="let f of movies">
     <div class="card stil h-100">
       <img [src]="[f.image]" class="card-img-top img-stil" />
       <div class="card-body">
@@ -10,8 +10,9 @@
         </p>
         <p>{{ f.year }}</p>
         <p>{{ f.director }}</p>
-        <button class="btn btn-info" (click)="toggleFavourite(f)">
-          Preferito
+        <button class="btn btn-success" (click)="toggleFavourite(f)">
+          {{ favourite ? "rimuovi da preferiti" : "aggiungi a preferiti" }}
+          <!--non funziona, o meglio li cambia tutti(giustamente facendolo cosi)...aggiusterò quando avrò più tempo. -->
         </button>
       </div>
     </div>

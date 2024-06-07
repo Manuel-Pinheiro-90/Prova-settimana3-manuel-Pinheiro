@@ -14,7 +14,7 @@ export class MoviesComponent {
 
   movies: iMovies[] = [];
   user: iUser | undefined;
-
+  favourite: boolean = false; //-non funziona, o meglio li cambia tutti(giustamente facendolo cosi)...aggiusterò quando avrò più tempo.
   constructor(
     private movieSvc: MoviesService,
    ) {}
@@ -35,7 +35,7 @@ export class MoviesComponent {
 
 toggleFavourite(movie:iMovies){
   this.movieSvc.toggleFavourite(movie);
-
+  this.favourite = !this.favourite;
 
 
 
