@@ -1,0 +1,7 @@
+password per entrare con il primo utente
+
+email= m@libero
+pass=12345
+
+ho avuto molta difficoltà nel creare il sistema di preferiti,
+che pure ora non è perfetto e non funziona sempre in modo ottimale . mi scuso per aver trascurato la grafica.
