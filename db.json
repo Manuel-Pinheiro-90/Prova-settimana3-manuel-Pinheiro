@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "m@libero",
+      "password": "$2a$10$9bH2tEZO9DRjrXqt8FX5b.sh3cClcOOwX7vnjrRoAD..wh43bbnfO",
+      "nome": "Manuel",
+      "cognome": "Ugov",
+      "id": 1
+    }
+  ]
+}
