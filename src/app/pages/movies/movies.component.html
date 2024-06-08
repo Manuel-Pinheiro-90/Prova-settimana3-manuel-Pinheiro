@@ -2,7 +2,9 @@
   <div class="col-12 col-md-6 col-lg-3 mt-5" *ngFor="let f of movies">
     <div class="card stil h-100">
       <img [src]="[f.image]" class="card-img-top img-stil" />
-      <div class="card-body">
+      <div
+        class="card-body bg-warning-subtle d-flex flex-column justify-content-between"
+      >
         <h5 class="card-title">{{ f.title }}</h5>
 
         <p class="card-text">
@@ -12,7 +14,8 @@
         <p>{{ f.director }}</p>
         <button class="btn btn-success" (click)="toggleFavourite(f)">
           {{ favourite ? "rimuovi da preferiti" : "aggiungi a preferiti" }}
-          <!--non funziona, o meglio li cambia tutti(giustamente facendolo cosi)...aggiusterò quando avrò più tempo. -->
+          <!--non funziona, o meglio li cambia tutti(giustamente facendolo cosi)...aggiusterò quando avrò più tempo.
+          indubbiamente pensando maggiormente alla progettazione avrei optato per un componente singolo da riusare su più pagine -->
         </button>
       </div>
     </div>

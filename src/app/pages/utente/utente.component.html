@@ -9,7 +9,7 @@
           alt="..."
         />
       </div>
-      <div class="card-body">
+      <div class="card-body bg-warning-subtle">
         <h5 class="card-title">{{ user.nome }} {{ user.cognome }}</h5>
         <p class="card-text">
           Questa è la tua area personale! di seguito puoi vedere tutti i film
@@ -25,7 +25,9 @@
 <H3>Film Preferiti</H3>
 <div class="row">
   <div class="col col-3 my-5" *ngFor="let f of favourite">
-    <div class="card stil h-100">
+    <div
+      class="card stil h-100 bg-warning-subtle d-flex flex-column justify-content-between"
+    >
       <img [src]="[f.movie.image]" class="card-img-top img-stil" />
       <div class="card-body">
         <h5 class="card-title">{{ f.movie.title }}</h5>
