@@ -27,6 +27,20 @@
       "nome": "Todo",
       "cognome": "Yzzuki",
       "id": 4
+    },
+    {
+      "email": "bydykyme@mailinator.com",
+      "password": "$2a$10$RyHainsNuaK77I/dApBZCOsF.fR2arFycoDSECcdW5kPNNKex42ye",
+      "nome": "Praesentium temporib",
+      "cognome": "Eos et molestias dol",
+      "id": 5
+    },
+    {
+      "email": "saqicono@mailinator.com",
+      "password": "$2a$10$yhJ04b5VOs/1gY4KzisPbuFko/31QdXq0fFAqk1rz6GaZ6NLsdW2G",
+      "nome": "Consequatur id dolor",
+      "cognome": "Voluptatem enim vol",
+      "id": 6
     }
   ],
   "movies": [

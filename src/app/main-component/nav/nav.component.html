@@ -19,16 +19,34 @@
           <a class="nav-link" routerLink="/">Login</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/movies">Film</a>
+          <a
+            class="nav-link"
+            routerLink="/movies"
+            routerLinkActive="active-link"
+            >Film</a
+          >
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/utente">Utente</a>
+          <a
+            class="nav-link"
+            routerLink="/utente"
+            routerLinkActive="active-link"
+            >Utente</a
+          >
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/users">Utenti registrati</a>
+          <a class="nav-link" routerLink="/users" routerLinkActive="active-link"
+            >Utenti registrati</a
+          >
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <button (click)="logout()" class="nav-link">Logout</button>
+          <button
+            (click)="logout()"
+            class="nav-link"
+            routerLinkActive="active-link"
+          >
+            Logout
+          </button>
         </li>
       </ul>
     </div>
